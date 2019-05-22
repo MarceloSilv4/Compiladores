@@ -1,0 +1,83 @@
+Helpers 
+
+    digit = ['0' .. '9'] ; 
+    minuscula = ['a'..'z'] ;
+    maiuscula = ['A'..'Z'] ;
+    underscore = '_' ;
+    barra_comum = '/';
+    todos = [0..127];
+    aspa_simples = ''' ;
+    
+//operadores
+	//aritméticos     
+    soma = '+' ;
+	subtracao = '-';
+	multiplicacao = '*' ;
+	divisao = '/' ;
+    
+    // relacional
+    maior = '>' ;
+	menor = '<' ;
+	igual = '=' ;
+
+//auxiliares
+	tecla_espaco = ' ';
+	tecla_enter1 = 10;
+	tecla_enter2 = 13;
+	tecla_tab = '	';
+	virgula = ',';
+  
+Tokens 
+
+//palavras reservadas
+	inicio = 'inicio';
+	fim = 'fim';
+	caractere = 'caractere';
+	real = 'real';
+	inteiro = 'inteiro';
+	se = 'se';
+	senao = 'senao';
+	enquanto = 'enquanto';
+	para = 'para';
+	avalie = 'avalie';
+	caso = 'caso';
+	verdadeiro = 'verdadeiro';
+	falso = 'falso';
+	booleano = 'booleano';
+
+//identificador
+	id = (minuscula | maiuscula | underscore) (minuscula | maiuscula | underscore | digit )*;
+	num_real = ('-'?) (digit+ virgula  digit+) ;
+	num_int = ('-'?) (digit+);
+	
+//comentários
+	comentario = barra_comum barra_comum;
+	comentario_abre = barra_comum + '*';
+	comentario_fecha = '*' + barra_comum;
+	
+//Strings
+	//string = aspa_simples + [todos - (tecla_enter1 | tecla_enter2]  + aspa_simples;
+	
+//vetores
+	
+	
+//Expressões lógicas
+	
+   
+//Operadores
+	//relacionais 
+	maior_igual = maior(igual);
+	menor_igual = menor(igual);
+	diferenca = menor(maior);
+	
+	//booleanos
+	nao = 'nao';
+	e = 'e' ;
+	ou = 'ou' ; 
+
+//auxiliares
+	tecla_espaco = ' ';
+	tecla_enter = tecla_enter1 | tecla_enter2;
+	tecla_tab1 = tecla_tab;
+
+ 
